@@ -24,7 +24,7 @@
             background-color: var(--bg);
         }
 
-        /* Navigation - Improved for Mobile */
+        /* Navigation */
         nav {
             display: flex;
             justify-content: space-between;
@@ -58,7 +58,7 @@
             text-transform: uppercase;
         }
 
-        /* Hero Section */
+        /* Hero Section - FIXED IMAGE LOCATION */
         .hero {
             height: 60vh;
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
@@ -94,20 +94,18 @@
         .products { padding: 60px 5%; background: var(--light); }
         .product-grid { display: flex; flex-direction: column; gap: 30px; max-width: 1000px; margin: 0 auto; }
         .product-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        
+        /* Product Image Settings */
         .product-img { width: 100%; height: auto; display: block; }
         .product-info { padding: 25px; text-align: center; }
         .product-info h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 8px; }
 
-        /* FIXED CONTACT SECTION - Visualized in Screenshot Fix */
+        /* Contact Section */
         .contact-section { padding: 80px 8%; background: white; }
         .contact-container { max-width: 600px; margin: 0 auto; }
         .contact-header { text-align: center; margin-bottom: 30px; }
         
-        form { 
-            display: flex; 
-            flex-direction: column; 
-            gap: 15px; 
-        }
+        form { display: flex; flex-direction: column; gap: 15px; }
         
         input, textarea, select { 
             width: 100%; 
@@ -117,7 +115,6 @@
             font-family: 'Inter', sans-serif; 
             font-size: 1rem; 
             background-color: white;
-            -webkit-appearance: none; /* Fix for mobile styling */
         }
 
         .btn-submit {
@@ -137,11 +134,9 @@
 
         footer { background: #000; color: white; padding: 40px 8%; text-align: center; font-size: 0.9rem; }
 
-        /* Responsive Desktop adjustments */
         @media (min-width: 768px) {
             .product-grid { flex-direction: row; }
             .hero-text h1 { font-size: 4rem; }
-            .logo { font-size: 1.8rem; }
             nav .links a { font-size: 0.9rem; }
         }
     </style>
@@ -168,7 +163,7 @@
         <div class="profile-container">
             <div class="profile-text">
                 <h2>Our Story</h2>
-                <p>Hiriya Salt production plc. is founded Ethiopia's Adama premier refinery dedicated to high-purity, iodized salt solutions. We combine modern industrial design with rigorous refining to set the benchmark for mineral excellence.</p>
+                <p>Hiriya Salt production plc. is founded in <strong>Adama, Ethiopia</strong>. We are a premier refinery dedicated to high-purity, iodized salt solutions. We combine modern industrial design with rigorous refining to set the benchmark for mineral excellence.</p>
             </div>
             <div class="values-box">
                 <ul>
@@ -212,18 +207,14 @@
             
             <form action="https://formspree.io/f/mojnappz" method="POST">
                 <input type="text" name="Name" placeholder="Full Name" required>
-                
                 <input type="email" name="Email" placeholder="Email Address" required>
-                
                 <select name="Interest" required>
                     <option value="" disabled selected>Select Salt Grade</option>
                     <option value="Miyawa Salt">Miyawa Salt (Table)</option>
                     <option value="Mada Salt">Mada Salt (Industrial)</option>
                     <option value="Distribution">Distribution Partnership</option>
                 </select>
-                
                 <textarea name="Message" rows="5" placeholder="How can we assist you?" required></textarea>
-                
                 <button type="submit" class="btn-submit">Send Message</button>
             </form>
         </div>
@@ -231,8 +222,9 @@
 
     <footer>
         <p><strong>Email:</strong> Umery1969@gmail.com</p>
-        <p><strong>Phone:</strong> 0949812589</p> Adama
-        <p style="opacity:0.4; margin-top:20px; font-size:0.75rem;">&copy; 2026 Hiriya Salt Co. | Best Design Salt Produce</p>
+        <p><strong>Phone:</strong> 0949812589</p>
+        <p><strong>Address:</strong> Adama, Ethiopia</p>
+        <p style="opacity:0.4; margin-top:20px; font-size:0.75rem;">&copy; 2026 Hiriya Salt production plc. | Best Design Salt Produce</p>
     </footer>
 
 </body>
