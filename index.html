@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiriya | Best Design Salt Production</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --accent: #0077b6;
+            --gold: #c5a059;
+            --bg: #ffffff;
+            --light: #f8f9fa;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; color: var(--primary); line-height: 1.6; scroll-behavior: smooth; }
+
+        /* Navigation */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 8%; background: white; position: fixed; width: 100%; top: 0; z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; letter-spacing: 3px; }
+        nav .links a { text-decoration: none; color: var(--primary); margin-left: 30px; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; }
+
+        /* Hero */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('IMG_20260205_223005_084.jpg');
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding-top: 80px;
+        }
+        .hero-text h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin-bottom: 10px; }
+
+        /* Products */
+        .products { padding: 80px 8%; background: var(--light); }
+        .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .product-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; }
+        .product-img { height: 400px; width: 100%; object-fit: cover; }
+        .product-info { padding: 30px; text-align: center; }
+
+        /* Form Styling */
+        .contact-section { padding: 100px 8%; background: white; }
+        .contact-container { max-width: 800px; margin: 0 auto; }
+        form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .full-width { grid-column: span 2; }
+        input, textarea, select { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; }
+        
+        .btn-submit {
+            grid-column: span 2; padding: 18px; background: var(--primary); color: white;
+            border: none; text-transform: uppercase; font-weight: bold; cursor: pointer; transition: 0.3s;
+        }
+        .btn-submit:hover { background: var(--accent); }
+
+        footer { background: #000; color: white; padding: 60px 8%; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">HIRIYA</div>
+        <div class="links">
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Best Design Salt</h1>
+            <p style="color:var(--gold)">REFINED • IODIZED • PURE</p>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="IMG_20260205_223019_270.jpg" alt="Miyawa Salt" class="product-img">
+                <div class="product-info">
+                    <h3>Miyawa Salt</h3>
+                    <p>Premium table salt for household excellence.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="IMG_20260205_223023_513.jpg" alt="Mada Salt" class="product-img">
+                <div class="product-info">
+                    <h3>Mada Salt</h3>
+                    <p>Industrial grade purity for large-scale production.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div style="text-align:center; margin-bottom:40px;">
+                <h2 style="font-family:'Playfair Display', serif; font-size: 2.5rem;">Place an Inquiry</h2>
+            </div>
+            
+            <form action="https://formspree.io/f/{form_id}" method="POST">
+                <input type="text" name="Name" placeholder="Full Name" required>
+                <input type="email" name="Email" placeholder="Email Address" required>
+                
+                <select name="Product" class="full-width">
+                    <option value="Miyawa Salt">Miyawa Salt</option>
+                    <option value="Mada Salt">Mada Salt</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                </select>
+                
+                <textarea name="Message" class="full-width" rows="5" placeholder="How can we help you?" required></textarea>
+                
+                <button type="submit" class="btn-submit">Send Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>Email:</strong> Umery1969@gmail.com | <strong>Phone:</strong> 0949812589</p>
+        <p style="margin-top:20px; opacity:0.5; font-size:0.8rem;">&copy; 2026 Hiriya Salt Co.</p>
+    </footer>
+
+</body>
+</html>
