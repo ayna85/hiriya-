@@ -24,7 +24,6 @@
             background-color: var(--bg);
         }
 
-        /* Navigation */
         nav {
             display: flex;
             justify-content: space-between;
@@ -45,10 +44,7 @@
             letter-spacing: 2px;
         }
 
-        nav .links {
-            display: flex;
-            gap: 15px;
-        }
+        nav .links { display: flex; gap: 15px; }
 
         nav .links a {
             text-decoration: none;
@@ -58,11 +54,11 @@
             text-transform: uppercase;
         }
 
-        /* Hero Section - FIXED IMAGE LOCATION */
+        /* Hero Section - Image Path Fixed */
         .hero {
             height: 60vh;
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('images/IMG_20260205_223005_084.jpg');
+                        url('IMG_20260205_223005_084.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -76,7 +72,6 @@
         .hero-text h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 10px; }
         .hero-text p { font-size: 1rem; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; }
 
-        /* Company Profile */
         .profile-section { padding: 60px 8%; background: white; }
         .profile-container { max-width: 900px; margin: 0 auto; }
         .profile-text h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 20px; text-align: center; }
@@ -90,46 +85,22 @@
         }
         .values-box li { list-style: none; margin-bottom: 8px; font-weight: 600; font-size: 0.95rem; }
 
-        /* Products Section */
         .products { padding: 60px 5%; background: var(--light); }
         .product-grid { display: flex; flex-direction: column; gap: 30px; max-width: 1000px; margin: 0 auto; }
         .product-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
-        
-        /* Product Image Settings */
         .product-img { width: 100%; height: auto; display: block; }
         .product-info { padding: 25px; text-align: center; }
         .product-info h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 8px; }
 
-        /* Contact Section */
         .contact-section { padding: 80px 8%; background: white; }
         .contact-container { max-width: 600px; margin: 0 auto; }
         .contact-header { text-align: center; margin-bottom: 30px; }
-        
         form { display: flex; flex-direction: column; gap: 15px; }
-        
-        input, textarea, select { 
-            width: 100%; 
-            padding: 16px; 
-            border: 1px solid #ddd; 
-            border-radius: 8px; 
-            font-family: 'Inter', sans-serif; 
-            font-size: 1rem; 
-            background-color: white;
-        }
+        input, textarea, select { width: 100%; padding: 16px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; }
 
         .btn-submit {
-            width: 100%;
-            padding: 20px;
-            background: var(--primary);
-            color: white;
-            border: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 8px;
-            letter-spacing: 2px;
-            font-size: 1rem;
-            margin-top: 10px;
+            padding: 20px; background: var(--primary); color: white; border: none; text-transform: uppercase;
+            font-weight: bold; cursor: pointer; border-radius: 8px; letter-spacing: 2px; margin-top: 10px;
         }
 
         footer { background: #000; color: white; padding: 40px 8%; text-align: center; font-size: 0.9rem; }
@@ -137,7 +108,6 @@
         @media (min-width: 768px) {
             .product-grid { flex-direction: row; }
             .hero-text h1 { font-size: 4rem; }
-            nav .links a { font-size: 0.9rem; }
         }
     </style>
 </head>
@@ -179,7 +149,7 @@
     <section class="products" id="products">
         <div class="product-grid">
             <div class="product-card">
-                <img src="images/IMG_20260205_223019_270.jpg" alt="Miyawa Salt" class="product-img">
+                <img src="IMG_20260205_223019_270.jpg" alt="Miyawa Salt" class="product-img">
                 <div class="product-info">
                     <h3 style="color:var(--accent); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Miyawa Salt</h3>
                     <h3>Culinary & Table</h3>
@@ -188,7 +158,7 @@
             </div>
 
             <div class="product-card">
-                <img src="images/IMG_20260205_223023_513.jpg" alt="Mada Salt" class="product-img">
+                <img src="IMG_20260205_223023_513.jpg" alt="Mada Salt" class="product-img">
                 <div class="product-info">
                     <h3 style="color:var(--accent); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Mada Salt</h3>
                     <h3>Industrial Grade</h3>
@@ -204,7 +174,6 @@
                 <h2 style="font-family:'Playfair Display'; font-size: 2.2rem;">Direct Inquiry</h2>
                 <p>Reach out to us for orders and partnerships.</p>
             </div>
-            
             <form action="https://formspree.io/f/mojnappz" method="POST">
                 <input type="text" name="Name" placeholder="Full Name" required>
                 <input type="email" name="Email" placeholder="Email Address" required>
@@ -223,8 +192,8 @@
     <footer>
         <p><strong>Email:</strong> Umery1969@gmail.com</p>
         <p><strong>Phone:</strong> 0949812589</p>
-        <p><strong>Address:</strong> Adama, Ethiopia</p>
-        <p style="opacity:0.4; margin-top:20px; font-size:0.75rem;">&copy; 2026 Hiriya Salt production plc. | Best Design Salt Produce</p>
+        <p><strong>Location:</strong> Adama, Ethiopia</p>
+        <p style="opacity:0.4; margin-top:20px; font-size:0.75rem;">&copy; 2026 Hiriya Salt Co. | Best Design Salt Produce</p>
     </footer>
 
 </body>
