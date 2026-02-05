@@ -1,15 +1,15 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hiriya | Best Design Salt Production</title>
+    <title>Hiriya | Purity by Design</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1a1a1a;    /* Deep Black */
-            --accent: #0077b6;     /* Crystal Blue */
-            --gold: #c5a059;       /* Designer Gold */
+            --primary: #1a1a1a;
+            --accent: #0077b6;
+            --gold: #c5a059;
             --bg: #ffffff;
             --light: #f8f9fa;
         }
@@ -21,14 +21,15 @@
             color: var(--primary); 
             line-height: 1.6;
             scroll-behavior: smooth;
+            background-color: var(--bg);
         }
 
-        /* Navigation */
+        /* Navigation - Improved for Mobile */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 8%;
+            padding: 15px 5%;
             background: white;
             position: fixed;
             width: 100%;
@@ -39,25 +40,29 @@
 
         .logo { 
             font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             font-weight: 700;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
+        }
+
+        nav .links {
+            display: flex;
+            gap: 15px;
         }
 
         nav .links a {
             text-decoration: none;
             color: var(--primary);
-            margin-left: 30px;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
         }
 
-        /* Hero Section - Using Your Image 084 */
+        /* Hero Section */
         .hero {
-            height: 80vh;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                        url('IMG_20260205_223005_084.jpg');
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('images/IMG_20260205_223005_084.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -65,82 +70,79 @@
             justify-content: center;
             text-align: center;
             color: white;
-            padding-top: 80px;
+            padding-top: 60px;
         }
 
-        .hero-text h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin-bottom: 10px; }
-        .hero-text p { font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
+        .hero-text h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 10px; }
+        .hero-text p { font-size: 1rem; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; }
 
-        /* Quality Standards */
-        .quality-row {
-            display: flex;
-            justify-content: space-around;
-            padding: 40px 8%;
-            background: var(--primary);
-            color: white;
-            text-align: center;
+        /* Company Profile */
+        .profile-section { padding: 60px 8%; background: white; }
+        .profile-container { max-width: 900px; margin: 0 auto; }
+        .profile-text h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 20px; text-align: center; }
+        
+        .values-box { 
+            background: var(--light); 
+            padding: 25px; 
+            border-radius: 12px; 
+            margin-top: 30px;
+            border-left: 4px solid var(--accent); 
         }
-        .quality-card h3 { color: var(--gold); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 5px; }
-        .quality-card p { font-weight: 600; }
+        .values-box li { list-style: none; margin-bottom: 8px; font-weight: 600; font-size: 0.95rem; }
 
         /* Products Section */
-        .products { padding: 80px 8%; background: var(--light); }
-        .product-header { text-align: center; margin-bottom: 50px; }
-        .product-header h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; }
+        .products { padding: 60px 5%; background: var(--light); }
+        .product-grid { display: flex; flex-direction: column; gap: 30px; max-width: 1000px; margin: 0 auto; }
+        .product-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .product-img { width: 100%; height: auto; display: block; }
+        .product-info { padding: 25px; text-align: center; }
+        .product-info h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 8px; }
 
-        .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        .product-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; }
-        .product-card:hover { transform: translateY(-10px); }
+        /* FIXED CONTACT SECTION - Visualized in Screenshot Fix */
+        .contact-section { padding: 80px 8%; background: white; }
+        .contact-container { max-width: 600px; margin: 0 auto; }
+        .contact-header { text-align: center; margin-bottom: 30px; }
         
-        /* Product Images Using Your Files 270 and 513 */
-        .product-img { 
-            height: 400px; 
-            width: 100%;
-            object-fit: cover;
+        form { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 15px; 
         }
-
-        .product-info { padding: 30px; text-align: center; }
-        .product-info h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 10px; }
-        .product-tag { color: var(--accent); font-weight: bold; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
-
-        /* Contact Section */
-        .contact-section { padding: 100px 8%; background: white; }
-        .contact-container { max-width: 800px; margin: 0 auto; }
-        .contact-header { text-align: center; margin-bottom: 50px; }
-
-        form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .full-width { grid-column: span 2; }
         
-        input, textarea, select {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: inherit;
+        input, textarea, select { 
+            width: 100%; 
+            padding: 16px; 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
+            font-family: 'Inter', sans-serif; 
+            font-size: 1rem; 
+            background-color: white;
+            -webkit-appearance: none; /* Fix for mobile styling */
         }
 
         .btn-submit {
-            grid-column: span 2;
-            padding: 18px;
+            width: 100%;
+            padding: 20px;
             background: var(--primary);
             color: white;
             border: none;
             text-transform: uppercase;
             font-weight: bold;
             cursor: pointer;
-            transition: 0.3s;
+            border-radius: 8px;
+            letter-spacing: 2px;
+            font-size: 1rem;
+            margin-top: 10px;
         }
 
-        .btn-submit:hover { background: var(--accent); }
+        footer { background: #000; color: white; padding: 40px 8%; text-align: center; font-size: 0.9rem; }
 
-        footer { background: #000; color: white; padding: 60px 8%; text-align: center; }
-        .contact-meta { margin-bottom: 30px; }
-        .contact-meta p { margin: 5px 0; }
-
-        @media (max-width: 768px) {
-            .product-grid, form { grid-template-columns: 1fr; }
-            .full-width, .btn-submit { grid-column: span 1; }
-            .hero-text h1 { font-size: 2.5rem; }
+        /* Responsive Desktop adjustments */
+        @media (min-width: 768px) {
+            .product-grid { flex-direction: row; }
+            .hero-text h1 { font-size: 4rem; }
+            .logo { font-size: 1.8rem; }
+            nav .links a { font-size: 0.9rem; }
         }
     </style>
 </head>
@@ -149,7 +151,7 @@
     <nav>
         <div class="logo">HIRIYA</div>
         <div class="links">
-            <a href="#about">About</a>
+            <a href="#about">Company</a>
             <a href="#products">Products</a>
             <a href="#contact">Contact</a>
         </div>
@@ -157,39 +159,45 @@
 
     <section class="hero">
         <div class="hero-text">
-            <h1>The Essence of Purity</h1>
-            <p>Refined • Iodized • Pure</p>
+            <h1>Purity by Design</h1>
+            <p>Hiriya Salt Produce Co.</p>
         </div>
     </section>
 
-    <div class="quality-row">
-        <div class="quality-card"><h3>Standard</h3><p>Triple Refined</p></div>
-        <div class="quality-card"><h3>Health</h3><p>Iodized Formula</p></div>
-        <div class="quality-card"><h3>Quality</h3><p>100% Organic Pure</p></div>
-    </div>
+    <section class="profile-section" id="about">
+        <div class="profile-container">
+            <div class="profile-text">
+                <h2>Our Story</h2>
+                <p>Hiriya Salt production plc. is founded Ethiopia's Adama premier refinery dedicated to high-purity, iodized salt solutions. We combine modern industrial design with rigorous refining to set the benchmark for mineral excellence.</p>
+            </div>
+            <div class="values-box">
+                <ul>
+                    <li>✓ 100% Triple-Refined Pure</li>
+                    <li>✓ WHO-Grade Iodization</li>
+                    <li>✓ Advanced Mineral Processing</li>
+                    <li>✓ Sustainable Design Packaging</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
     <section class="products" id="products">
-        <div class="product-header">
-            <h2>Our Signature Collection</h2>
-            <p>Best design salt produced for excellence.</p>
-        </div>
-        
         <div class="product-grid">
             <div class="product-card">
-                <img src="IMG_20260205_223019_270.jpg" alt="Miyawa Salt" class="product-img">
+                <img src="images/IMG_20260205_223019_270.jpg" alt="Miyawa Salt" class="product-img">
                 <div class="product-info">
-                    <span class="product-tag">Culinary Perfection</span>
-                    <h3>Miyawa Salt</h3>
-                    <p>Finely granulated and perfectly iodized for household and gourmet use.</p>
+                    <h3 style="color:var(--accent); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Miyawa Salt</h3>
+                    <h3>Culinary & Table</h3>
+                    <p>Finely granulated and perfectly iodized for daily health and gourmet excellence.</p>
                 </div>
             </div>
 
             <div class="product-card">
-                <img src="IMG_20260205_223023_513.jpg" alt="Mada Salt" class="product-img">
+                <img src="images/IMG_20260205_223023_513.jpg" alt="Mada Salt" class="product-img">
                 <div class="product-info">
-                    <span class="product-tag">Industrial Purity</span>
-                    <h3>Mada Salt</h3>
-                    <p>High-grade refined crystals designed for industrial processing and bulk needs.</p>
+                    <h3 style="color:var(--accent); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Mada Salt</h3>
+                    <h3>Industrial Grade</h3>
+                    <p>High-purity refined crystals optimized for industrial chemical use and large-scale manufacturing.</p>
                 </div>
             </div>
         </div>
@@ -198,39 +206,34 @@
     <section class="contact-section" id="contact">
         <div class="contact-container">
             <div class="contact-header">
-                <h2>Direct Inquiry</h2>
-                <p>Contact Hiriya Salt Co. for orders and partnerships.</p>
+                <h2 style="font-family:'Playfair Display'; font-size: 2.2rem;">Direct Inquiry</h2>
+                <p>Reach out to us for orders and partnerships.</p>
             </div>
             
-            <form id="hiriyaForm">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <select class="full-width">
-                    <option value="">Select Salt Grade</option>
-                    <option value="miyawa">Miyawa Salt</option>
-                    <option value="mada">Mada Salt</option>
+            <form action="https://formspree.io/f/mojnappz" method="POST">
+                <input type="text" name="Name" placeholder="Full Name" required>
+                
+                <input type="email" name="Email" placeholder="Email Address" required>
+                
+                <select name="Interest" required>
+                    <option value="" disabled selected>Select Salt Grade</option>
+                    <option value="Miyawa Salt">Miyawa Salt (Table)</option>
+                    <option value="Mada Salt">Mada Salt (Industrial)</option>
+                    <option value="Distribution">Distribution Partnership</option>
                 </select>
-                <textarea class="full-width" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn-submit">Submit Inquiry</button>
+                
+                <textarea name="Message" rows="5" placeholder="How can we assist you?" required></textarea>
+                
+                <button type="submit" class="btn-submit">Send Message</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <div class="contact-meta">
-            <p><strong>Email:</strong> Umery1969@gmail.com</p>
-            <p><strong>Phone:</strong> 0949812589</p>
-        </div>
-        <p style="font-size: 0.8rem; opacity: 0.4;">&copy; 2026 Hiriya Salt Co. | Best Design Salt Company</p>
+        <p><strong>Email:</strong> Umery1969@gmail.com</p>
+        <p><strong>Phone:</strong> 0949812589</p> Adama
+        <p style="opacity:0.4; margin-top:20px; font-size:0.75rem;">&copy; 2026 Hiriya Salt Co. | Best Design Salt Produce</p>
     </footer>
-
-    <script>
-        document.getElementById('hiriyaForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you! Your message has been sent to Hiriya. We will reply to your email shortly.');
-            this.reset();
-        });
-    </script>
 
 </body>
 </html>
